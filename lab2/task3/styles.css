@@ -1,0 +1,251 @@
+:root {
+    --gray-bg: #f6f8fa;
+    --gray-border: #d0d7de;
+    --gray-text: #57606a;
+    --black: #24292f;
+
+    --blue: #0969da;
+
+    --green: #2da44e;
+
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: white;
+    color: var(--black);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo img {
+    width: 32px;
+    margin-left: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 14px;
+}
+
+.nav-menu a.active {
+    font-weight: 600;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 25px;
+}
+
+.search {
+    position: relative;
+}
+
+.search input {
+    padding: 6px 12px 6px 36px;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    width: 220px;
+    background: var(--gray-bg);
+}
+
+.search::before {
+    content: "🔍";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dashboard-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--gray-bg);
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: 0 auto 32px;
+    color: var(--gray-text);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary { background: black; color: white; width: auto; padding: 12px 32px; }
+
+.btn-outline {
+    border: 1px solid black;
+    color: black;
+    background: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.container h1 {
+    font-size: 63px;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+.pricing-tiers {
+    padding: 80px 0;
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+.tier-card {
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    position: relative;
+    background: white;
+}
+
+.tier-card.recommended {
+    border: 2px solid var(--blue);
+}
+
+.badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--blue);
+    color: white;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 999px;
+}
+
+.tier-header {
+    background: var(--gray-bg);
+    padding: 32px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.tier-cta {
+    padding: 24px;
+    text-align: center;
+}
+
+.features {
+    list-style: none;
+    padding: 24px 32px;
+}
+
+.features li {
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.addons {
+    padding: 80px 0;
+    background: var(--gray-bg);
+}
+
+.addons h2,
+.addons p {
+    text-align: center;
+}
+
+.addons-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.addon-card {
+    background: white;
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+}
