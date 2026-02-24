@@ -1,0 +1,16 @@
+<div class="list-wrapper">
+  @if (products().length === 0) {
+    <div class="empty-state">
+      <p>There are no products in this category yet.</p>
+    </div>
+  } @else {
+    <div class="products-grid">
+      @for (product of products(); track product.id) {
+        <app-product-card
+          [product]="product"
+          (delete)="deleteProduct($event)">
+        </app-product-card>
+      }
+    </div>
+  }
+</div>
