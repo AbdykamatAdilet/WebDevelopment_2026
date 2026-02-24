@@ -1,0 +1,66 @@
+:host {
+  --primary: #4f46e5;
+  --bg: #f8fafc;
+  --text: #1e293b;
+
+  display: block;
+  min-height: 100vh;
+  background-color: var(--bg);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.main-categories {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.nav-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1.5px solid #e2e8f0;
+  background: white;
+  color: #475569;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.nav-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+.welcome-screen {
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border-radius: 18px;
+  border: 2px dashed #cbd5e1;
+  color: #94a3b8;
+}
