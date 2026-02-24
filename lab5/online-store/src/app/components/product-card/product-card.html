@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="image-container">
+    @if (currentImage) {
+      <img [src]="currentImage" class="main-image" alt="Product preview">
+    } @else {
+      <div class="no-image">No image</div>
+    }
+  </div>
+
+  <div class="thumbnails">
+    @for (img of product().images; track img) {
+      <img 
+        [src]="img" 
+        class="thumbnail" 
+        (click)="changeImage(img)"
+        alt="Thumbnail">
+    } @empty {
+      <p>No images available</p>
+    }
+  </div>
+
+  <div class="title">{{ product().name }}</div>
+  <div class="price">{{ product().price }} ₸</div>
+  <div class="rating">⭐ {{ product().rating }}</div>
+
+  <div class="buttons">
+    <button class="like-btn" (click)="like()">
+      like {{ product().likes }}
+    </button>
+
+    <button class="share-wats" (click)="shareWhatsApp()">
+      WhatsApp
+    </button>
+
+    <button class="share-tele" (click)="shareTelegram()">
+      Telegram
+    </button>
+
+    <a 
+      [href]="product().link" 
+      target="_blank" 
+      class="kaspi-btn">
+      View on Kaspi
+    </a>
+
+    <button class="delete-btn" (click)="remove()">
+      Delete
+    </button>
+  </div>
+</div>
