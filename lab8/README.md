@@ -1,4 +1,4 @@
-# Online Shop API (Lab 9)
+# Online Shop API (Lab 8 and 9)
 
 This is the backend for an Online Shop project, upgraded from Lab 8 using **Django REST Framework (DRF)**. It provides a robust RESTful API for managing products and categories.
 
